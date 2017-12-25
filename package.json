@@ -15,9 +15,6 @@
     "heroku-postbuild":
       "webpack -p --config ./prod.webpack.config.js --progress"
   },
-  "engines": {
-    "node": "^8.0.0"
-  },
   "pre-commit": ["test"],
   "keywords": ["react", "webpack", "eslint"],
   "author": "Quique Mateu",
