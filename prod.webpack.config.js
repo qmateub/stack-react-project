@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies, prettier/prettier */
+
 var path = require('path');
 var devConfig = require('./webpack.config.js');
 

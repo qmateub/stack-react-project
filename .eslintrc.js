@@ -8,6 +8,7 @@ module.exports = {
     define: true,
     require: true,
     module: true,
+    _: false,
   },
   extends: 'eslint:recommended',
   parser: 'babel-eslint',
