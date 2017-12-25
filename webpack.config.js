@@ -1,4 +1,5 @@
-var webpack = require('webpack');
+/*eslint no-undef disable*/
+
 var path = require('path');
 
 var DIST_DIR = path.resolve(__dirname, 'dist');

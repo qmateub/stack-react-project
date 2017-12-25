@@ -11,7 +11,9 @@
     "test": "webpack",
     "lint": "./node_modules/.bin/eslint src",
     "lint-fixup": "./node_modules/.bin/eslint src/app --ext .js,.jsx --fix",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "heroku-postbuild":
+      "webpack -p --config ./prod.webpack.config.js --progress"
   },
   "pre-commit": ["test"],
   "keywords": ["react", "webpack", "eslint"],
