@@ -1,5 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies, prettier/prettier */
-
+/* eslint-disable */
 var path = require('path');
 var devConfig = require('./webpack.config.js');
 
@@ -10,6 +9,7 @@ var prodConfig = devConfig;
 prodConfig.output = {
   path: DIST_DIR + '/app',
   filename: 'bundle.js',
+  publicPath: '/app/',
 };
 
 module.exports = prodConfig;
