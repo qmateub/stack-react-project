@@ -15,6 +15,9 @@
     "heroku-postbuild":
       "webpack -p --config ./prod.webpack.config.js --progress"
   },
+  "engines": {
+    "node": "^8.0.0"
+  },
   "pre-commit": ["test"],
   "keywords": ["react", "webpack", "eslint"],
   "author": "Quique Mateu",
@@ -41,7 +44,8 @@
   },
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
   },
   "config": {
     "commitizen": {
@@ -51,9 +55,6 @@
       "types": ["feat", "fix", "refactor"],
       "warnOnFail": true,
       "maxSubjectLength": 100,
-      "subjectPattern": "^[A-Z]+-[0-9]+ - .*",
-      "subjectPatternErrorMsg":
-        "Subject must be in format 'CMS-123 - Commit message'",
       "helpMessage": ""
     }
   }
