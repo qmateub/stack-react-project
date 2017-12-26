@@ -5,21 +5,26 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
-    "build":
-      "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
     "build:prod": "webpack -p && cp src/index.html dist/index.html",
     "test": "webpack",
     "lint": "./node_modules/.bin/eslint src",
-    "lint-fixup": "./node_modules/.bin/eslint src/app --ext .js,.jsx --fix",
+    "lint-fixup": "./node_modules/.bin/eslint src/app --ext .js,.jsx,.gql,.graphql --fix",
     "commitmsg": "validate-commit-msg",
-    "heroku-postbuild":
-      "webpack -p --config ./prod.webpack.config.js --progress"
+    "heroku-postbuild": "webpack -p --config ./prod.webpack.config.js --progress"
   },
-  "pre-commit": ["test"],
-  "keywords": ["react", "webpack", "eslint"],
+  "pre-commit": [
+    "test"
+  ],
+  "keywords": [
+    "react",
+    "webpack",
+    "eslint"
+  ],
   "author": "Quique Mateu",
   "license": "ISC",
   "devDependencies": {
+    "apollo-client-preset": "^1.0.5",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.1.1",
@@ -32,9 +37,13 @@
     "eslint": "^4.14.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-graphql": "^1.4.1",
     "eslint-plugin-react": "^7.5.1",
+    "graphql": "^0.12.3",
+    "graphql-tag": "^2.6.1",
     "husky": "^0.14.3",
     "pre-commit": "^1.2.2",
+    "react-apollo": "^2.0.4",
     "validate-commit-msg": "^2.14.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
@@ -49,7 +58,11 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "validate-commit-msg": {
-      "types": ["feat", "fix", "refactor"],
+      "types": [
+        "feat",
+        "fix",
+        "refactor"
+      ],
       "warnOnFail": true,
       "maxSubjectLength": 100,
       "helpMessage": ""

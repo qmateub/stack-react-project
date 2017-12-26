@@ -1,0 +1,11 @@
+query MyQuery1($number: Int!) {
+  pokemons(first: $number) {
+    id
+    name
+    image
+    evolutions {
+      id
+      image
+    }
+  }
+}
